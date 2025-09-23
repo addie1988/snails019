@@ -393,6 +393,11 @@
 
 .banner .banner_content .banner_img {
   position: relative;
+  padding-top: 160px;
+  background: url("./images/banner_bg_2.webp") center center;
+  background-size: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .banner .banner_content .banner_img .banner_img_content {
@@ -404,7 +409,7 @@
 }
 
 .banner .banner_content .banner_img .banner_img_content img {
-  width: 50%;
+  width: 40%;
   height: auto;
 }
 
