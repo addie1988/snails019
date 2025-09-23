@@ -1,0 +1,399 @@
+.header
+    position: fixed
+    width: 100%
+    height: 80px
+    z-index: 1000
+    background: url('./images/header_bg.jpg') center center
+    background-size: auto
+    width: 100%
+    transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out
+    
+    &.visible
+        transform: translateY(0)
+    
+    &.hidden
+        transform: translateY(-100%)
+    
+    &.with-background
+        backdrop-filter: blur(10px)
+        background-color: rgba(255, 255, 255, 0.8)
+        background-blend-mode: overlay
+
+    .header_content
+        margin: 0 auto
+        display: flex
+        justify-content: space-around
+        align-items: center
+        width: 100%
+        height: 80px
+
+        .header_logo
+            position: relative
+
+            .header_logo_content
+                margin: 0 auto
+
+                img
+                    width: 80%
+                    height: 100%
+
+        .header_menu
+            position: relative
+
+            .header_menu_content
+                margin: 0 auto
+
+                ul
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    gap: 60px
+
+                    li
+
+                        a
+                            text-decoration: none
+                            color: #000
+
+        .header_button
+            position: relative
+            display: inline-block
+
+            .header_button_content
+                width: 100%
+                height: 20px
+                margin: 0 auto
+                padding: 16px
+                border-radius: 100px
+                background-color: #000
+                display: flex
+                align-items: center
+                justify-content: center
+
+                svg
+                    color: #fff
+                    margin-right: 6px
+
+                a
+                    text-decoration: none
+                    color: #fff
+                    position: relative
+                    overflow: hidden
+                    transition: all 0.3s ease
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    p
+                        position: relative
+                        transition: all 0.3s ease
+
+                    &::after
+                        content: 'Order now'
+                        position: absolute
+                        top: 100px
+                        right: 0
+                        width: 100%
+                        z-index: 2
+                        transition: all 0.3s ease
+
+            &:hover
+                .header_button_content
+                    a
+                        p
+                            top: 300px
+                        &::after
+                            top: 0
+
+// 漢堡選單容器
+.hamburger_container
+    position: relative
+    display: none
+
+// 漢堡選單按鈕樣式
+.hamburger_menu
+    cursor: pointer
+    font-size: 24px
+    color: #000
+    z-index: 1001
+    transition: all 0.3s ease
+    padding: 10px
+
+    &:hover
+        color: #666
+
+// 漢堡圖標樣式
+.hamburger_icon
+    width: 30px
+    height: 20px
+    position: relative
+    transform: rotate(0deg)
+    transition: 0.3s ease-in-out
+    cursor: pointer
+
+    span
+        display: block
+        position: absolute
+        height: 3px
+        width: 100%
+        background: #000
+        border-radius: 3px
+        opacity: 1
+        left: 0
+        transform: rotate(0deg)
+        transition: 0.25s ease-in-out
+
+        &:nth-child(1)
+            top: 0px
+
+        &:nth-child(2)
+            top: 8px
+
+        &:nth-child(3)
+            top: 16px
+
+    &.active
+        span
+            &:nth-child(1)
+                top: 8px
+                transform: rotate(135deg)
+
+            &:nth-child(2)
+                opacity: 0
+                left: -60px
+
+            &:nth-child(3)
+                top: 8px
+                transform: rotate(-135deg)
+
+// 移動版選單樣式
+.mobile_menu
+    position: fixed
+    top: 60px
+    right: 0
+    width: 100%
+    border-radius: 8px
+    z-index: 1000
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    transition: all 0.3s ease
+
+    &.open
+        opacity: 1
+        visibility: visible
+        transform: translateY(0)
+
+    .menu_content
+        padding: 20px 0
+
+    .menu_close_btn
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 30px
+        height: 30px
+        background-color: #f8f9fa
+        border-radius: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        transition: all 0.3s ease
+        z-index: 1001
+
+        &:hover
+            background-color: #e9ecef
+            transform: scale(1.1)
+
+        span
+            font-size: 18px
+            color: #666
+            font-weight: bold
+            line-height: 1
+
+    .menu_nav
+        display: flex
+        flex-direction: column
+        padding: 0
+        margin: 0
+
+        .menu_link
+            display: flex
+            align-items: center
+            padding: 15px 25px
+            color: #000
+            text-decoration: none
+            font-size: 16px
+            font-weight: 500
+            transition: all 0.3s ease
+            border-bottom: 1px solid #f0f0f0
+            position: relative
+
+            &:last-child
+                border-bottom: none
+
+            .menu_icon
+                font-size: 20px
+                margin-right: 12px
+                transition: all 0.3s ease
+
+            &:hover
+                background-color: #f8f9fa
+                color: #333
+
+                .menu_icon
+                    transform: scale(1.1)
+
+// 響應式設計
+@media (max-width: 1170px)
+    .header
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15)
+        .header_content
+            .header_logo
+                order: 1
+                .header_logo_content
+                    img
+                        width: 80%
+                        height: auto
+
+            .hamburger_container
+                order: 3
+
+            // 隱藏桌面版選單
+            .header_menu
+                display: none
+
+            // 顯示漢堡選單容器
+            .hamburger_container
+                display: block
+
+            .header_button
+                order: 2
+
+@media (max-width: 768px)
+    .header
+        .header_content
+            height: 80px
+
+            .header_logo
+                .header_logo_content
+                    img
+                        width: 60%
+                        height: auto
+
+            .hamburger_menu
+                font-size: 20px
+
+            .header_button
+                .header_button_content
+                    padding: 15px
+                    font-size: 14px
+
+                    svg
+                        font-size: 16px
+
+        .mobile_menu
+
+            .menu_nav
+                .menu_link
+                    padding: 12px 20px
+                    font-size: 15px
+
+                    .menu_icon
+                        font-size: 18px
+                        margin-right: 10px
+
+@media (max-width: 578px)
+    .header
+        .header_content
+            height: 70px
+            padding: 0 15px
+
+            .header_logo
+                .header_logo_content
+                    img
+                        width: 50%
+                        height: auto
+
+            .hamburger_menu
+                font-size: 18px
+                padding: 8px
+
+            .header_button
+                display: none
+
+@media (max-width: 480px)
+    .header
+        .header_content
+            height: 70px
+            padding: 0 15px
+
+            .header_logo
+                .header_logo_content
+                    img
+                        width: 50%
+                        height: auto
+
+            .hamburger_menu
+                font-size: 18px
+                padding: 8px
+
+            .header_button
+                .header_button_content
+                    padding: 12px
+                    font-size: 12px
+
+                    svg
+                        font-size: 14px
+
+        .mobile_menu
+
+            .menu_nav
+                .menu_link
+                    padding: 12px 18px
+                    font-size: 14px
+
+                    .menu_icon
+                        font-size: 16px
+                        margin-right: 8px
+
+// ========================================================================================================= >>    
+
+.banner
+    position: relative
+    background: url('./images/banner_bg_1.jpg') center center
+    background-size: auto
+    width: 100%
+    height: 100%
+
+    .banner_content
+        margin: 0 auto
+
+        .banner_img
+            position: relative
+
+            .banner_img_content
+                margin: 0 auto
+                display: flex
+                justify-content: center
+                align-items: center
+                flex-direction: column
+
+                img
+                    width: 50%
+                    height: auto
+
+                    h1
+                        font-size: 40px
+                        font-weight: 600
+                        color: #fff
+                        text-align: center
+                        margin-top: 20px
+
+        .banner_text
+            position: relative
+            width: 100%
+
+        .banner_button
+            position: relative
