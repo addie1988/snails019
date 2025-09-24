@@ -908,14 +908,43 @@
 
 .feature .feature_content {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature .feature_content .feature_title {
   position: relative;
 }
 
+.feature .feature_content .feature_title .feature_title_content {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.feature .feature_content .feature_title .feature_title_content h1 {
+  font-size: 100px;
+  font-weight: 900;
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.feature .feature_content .feature_title .feature_title_content h1 p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
 .feature .feature_content .feature_ul {
   position: relative;
+  padding-top: 60px;
 }
 
 .feature .feature_content .feature_p {

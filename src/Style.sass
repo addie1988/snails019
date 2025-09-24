@@ -1,4 +1,5 @@
 $productbackgroundcolor: #FD961E
+$backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
 
 .header
     position: fixed
@@ -438,7 +439,7 @@ $productbackgroundcolor: #FD961E
                     font-size: 20rem
                     font-weight: 900
                     height: 350px
-                    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
+                    background-image: $backgroundimage
                     text-align: center
                     margin-top: 20px
                     color: transparent
@@ -536,7 +537,7 @@ $productbackgroundcolor: #FD961E
                     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
 
                     span
-                        background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
+                        background-image: $backgroundimage
                         -webkit-background-clip: text
                         background-clip: text
                         color: transparent
@@ -812,12 +813,36 @@ $productbackgroundcolor: #FD961E
 
     .feature_content
         margin: 0 auto
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
 
         .feature_title
             position: relative
 
+            .feature_title_content
+                margin: 0 auto
+                display: flex
+                align-items: center
+                justify-content: center
+                gap: 10px
+                h1
+                    font-size: 100px
+                    font-weight: 900
+                    font-family: 'Poppins', sans-serif
+                    background-image: $backgroundimage
+                    color: transparent
+                    -webkit-background-clip: text
+                    background-clip: text
+                    p
+                        font-size: 1.5rem
+                        font-weight: 600
+                        color: #000
+
         .feature_ul
-            position: relative  
+            position: relative
+            padding-top: 60px
 
         .feature_p
-            position: relative      
+            position: relative
