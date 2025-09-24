@@ -628,6 +628,13 @@ $productbackgroundcolor: #FD961E
                     position: relative
                     width: 50%
 
+                    .product_text_left_content
+                        margin: 0 auto
+
+                        img
+                            width: 100%
+                            height: 100%
+
                 .product_text_right
                     position: relative
                     width: 50%
@@ -635,13 +642,18 @@ $productbackgroundcolor: #FD961E
                     .product_text_right_content
                         margin: 0 auto
                         text-align: left
-                        padding-left: 20px
+                        padding-left: 80px
+
+                        svg
+                            font-size: 80px
+                            color: #bababa
 
                         h3
                             width: 500px
                             font-size: 60px
                             font-weight: 600
                             color: #000
+                            padding-top: 40px
 
                         p
                             width: 400px
@@ -682,6 +694,52 @@ $productbackgroundcolor: #FD961E
                                     &:hover
                                         transform: translateX(44px)
 
+        .product_list
+            position: relative
+            padding-top: 100px
+
+            .product_list_content
+                margin: 0 auto
+
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    gap: 70px
+
+                    li
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        gap: 20px
+
+                        .serial_numberno
+                            width: 60px
+                            height: 60px
+                            display: flex
+                            align-items: center
+                            justify-content: center
+                            font-size: 24px
+                            font-weight: 600
+                            color: #000
+                            background-color: #fff
+                            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3)
+                            padding: 10px
+                            border-radius: 50%
+                            transition: all 0.3s ease
+
+                            &:hover
+                                color: #fff
+                                background-color: #000
+
+                        p
+                            width: 160px
+                            text-align: left
+                            font-size: 18px
+                            font-weight: 600
+                            color: #000000
+
 // 標題輪播淡入淡出動畫
 @keyframes fadeInOut
     0%
@@ -696,3 +754,70 @@ $productbackgroundcolor: #FD961E
     100%
         opacity: 1
         transform: translateY(0)
+
+@media (max-width: 830px)
+    .product
+        .product_content
+            .product_title
+                width: 80%
+                margin: 0 auto
+                .product_title_area
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    .rating
+                        padding: 10px
+                        font-size: 14px
+                        .rating_content
+                            gap: 4px
+                            padding: 2px 6px
+                            svg
+                                font-size: 14px
+                    h2
+                        width: 80%
+                        font-size: 14px
+                        margin-left: 0
+                        margin-top: 15px
+            .product_text
+                .product_text_content
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    .product_text_left
+                        width: 100%
+                    .product_text_right
+                        width: 80%
+                        .product_text_right_content
+                            padding-left: 0
+                            svg
+                            h3
+                                width: 100%
+                                font-size: 20px
+                            p
+                                width: 100%
+                                font-size: 14px
+            .product_list
+                .product_list_content
+                    ul
+                        gap: 30px
+                        li
+                            .serial_numberno
+                                .serial_numberno
+
+// ========================================================================================================= >>    
+
+.feature
+    position: relative
+
+    .feature_content
+        margin: 0 auto
+
+        .feature_title
+            position: relative
+
+        .feature_ul
+            position: relative  
+
+        .feature_p
+            position: relative      

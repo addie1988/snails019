@@ -2,6 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import product_text_left from "./images/product_text_left_img.webp";
 import { BsArrowRight } from "react-icons/bs";
+import { SlEarphones } from "react-icons/sl";
 
 function Product() {
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
@@ -48,7 +49,7 @@ function Product() {
             </div>
             <div className="product_text_right">
               <div className="product_text_right_content">
-                
+                <SlEarphones />
                 <h3 className="rotating-title">
                   {titles[currentTitleIndex]}
                 </h3>
@@ -66,7 +67,24 @@ function Product() {
             </div>
           </div>
         </div>
-        <div className="product_list"></div>
+        <div className="product_list">
+          <div className="product_list_content">
+            <ul>
+              <li>
+                <div className="serial_numberno">01</div>
+                <p>Feel the shape of comfort.</p>
+              </li>
+              <li>
+                <div className="serial_numberno">02</div>
+                <p>Transform your great journey.</p>
+              </li>
+              <li>
+                <div className="serial_numberno">03</div>
+                <p>Hear the world around you.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   );
