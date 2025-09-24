@@ -1,9 +1,11 @@
+$productbackgroundcolor: #FD961E
+
 .header
     position: fixed
     width: 100%
     height: 80px
     z-index: 1000
-    background: url('./images/header_bg.jpg') center center
+    background-color: #fff
     background-size: auto
     width: 100%
     transition: transform 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, background-color 0.3s ease-in-out
@@ -34,7 +36,7 @@
                 margin: 0 auto
 
                 img
-                    width: 80%
+                    width: 70%
                     height: 100%
 
         .header_menu
@@ -134,10 +136,10 @@
     span
         display: block
         position: absolute
-        height: 3px
+        height: 2px
         width: 100%
         background: #000
-        border-radius: 3px
+        border-radius: 10px
         opacity: 1
         left: 0
         transform: rotate(0deg)
@@ -169,10 +171,9 @@
 // 移動版選單樣式
 .mobile_menu
     position: fixed
-    top: 60px
+    top: 80px
     right: 0
     width: 100%
-    border-radius: 8px
     z-index: 1000
     opacity: 0
     visibility: hidden
@@ -183,6 +184,7 @@
         opacity: 1
         visibility: visible
         transform: translateY(0)
+        background-color: #fff
 
     .menu_content
         padding: 20px 0
@@ -291,7 +293,7 @@
                     font-size: 14px
 
                     svg
-                        font-size: 16px
+                        font-size: 1px
 
         .mobile_menu
 
@@ -366,13 +368,14 @@
     background-size: auto
     width: 100%
     height: 100%
+    padding: 160px 0
+    overflow: hidden
 
     .banner_content
         margin: 0 auto
 
         .banner_img
             position: relative
-            padding-top: 160px
             background: url('./images/banner_bg_2.webp') center center
             background-size: auto
             width: 100%
@@ -384,21 +387,312 @@
                 justify-content: center
                 align-items: center
                 flex-direction: column
+                position: relative
 
-                img
-                    width: 40%
-                    height: auto
+                .banner_img_area
+                    position: relative
+                    text-align: center
+                    overflow: hidden
 
-                    h1
-                        font-size: 40px
-                        font-weight: 600
-                        color: #fff
-                        text-align: center
-                        margin-top: 20px
+                    // 聲波背景效果
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        width: 300px
+                        height: 300px
+                        background: radial-gradient(circle, rgba(0, 219, 222, 0.1) 0%, rgba(252, 0, 255, 0.1) 50%, transparent 70%)
+                        border-radius: 50%
+                        z-index: 1
+                        animation: soundwavePulse 3s ease-in-out infinite
+
+                    // 聲波環形效果
+                    &::after
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        left: 50%
+                        transform: translate(-50%, -50%)
+                        width: 200px
+                        height: 200px
+                        border: 2px solid rgba(0, 219, 222, 0.3)
+                        border-radius: 50%
+                        z-index: 1
+                        animation: soundwaveRing 2s ease-in-out infinite
+
+                    .banner_img_area_content
+                        margin: 0 auto
+                        position: relative
+                        z-index: 2
+
+                    img
+                        width: 100%
+                        height: auto
+                        position: relative
+                        z-index: 2
+
+                h1
+                    position: absolute
+                    font-size: 20rem
+                    font-weight: 900
+                    height: 350px
+                    background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
+                    text-align: center
+                    margin-top: 20px
+                    color: transparent
+                    -webkit-background-clip: text
+                    background-clip: text
+                    z-index: 1
+                    transition: all 0.1s ease-out
+                    cursor: pointer
+                    user-select: none
+
+                    &.interactive-text
+                        transform-origin: center
+
+                        &:hover
+                            transform: scale(1.05) !important
+                            filter: brightness(1.2)
+
+                        &.hover
+                            animation: pulse 2s infinite
+
+                    @keyframes pulse
+                        0%
+                            transform: scale(1)
+                        50%
+                            transform: scale(1.02)
+                        100%
+                            transform: scale(1)
 
         .banner_text
             position: relative
             width: 100%
+            padding-top: 60px
+
+            .banner_text_content
+                margin: 0 auto
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                justify-content: space-around
+
+                .banner_text_left
+                    position: relative
+                    display: inline-block
+                    .banner_text_left_content
+                        text-align: center
+                        h2
+                            font-size: 2rem
+                            font-weight: 600
+                            color: #000
+                            margin-bottom: 20px
+                            p
+                                font-size: 1.5rem
+                                font-weight: 600
+                                color: #000
+
+                .banner_text_right
+                    position: relative
+                    display: inline-block
+                    .banner_text_right_content
+                        text-align: center
+                        h2
+                            font-size: 2rem
+                            font-weight: 600
+                            color: #000
+                            p
+                                font-size: 1.5rem
+                                font-weight: 600
+                                color: #000
 
         .banner_button
             position: relative
+            padding-top: 80px
+
+            .banner_button_content
+                margin: 0 auto
+                display: flex
+                align-items: center
+                justify-content: center
+
+                a
+                    text-decoration: none
+                    color: #000
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    gap: 10px
+                    font-size: 1.5rem
+                    font-weight: 600
+                    width: 200px
+                    height: 20px
+                    background-color: #ffffff
+                    padding: 20px
+                    border-radius: 100px
+                    transition: all 0.3s ease
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1)
+
+                    span
+                        background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
+                        -webkit-background-clip: text
+                        background-clip: text
+                        color: transparent
+
+// 聲波動畫關鍵幀定義
+@keyframes soundwavePulse
+    0%
+        transform: translate(-50%, -50%) scale(0.8)
+        opacity: 0.3
+    50%
+        transform: translate(-50%, -50%) scale(1.2)
+        opacity: 0.6
+    100%
+        transform: translate(-50%, -50%) scale(0.8)
+        opacity: 0.3
+
+@keyframes soundwaveRing
+    0%
+        transform: translate(-50%, -50%) scale(0.5)
+        opacity: 0.8
+        border-color: rgba(0, 219, 222, 0.3)
+    50%
+        transform: translate(-50%, -50%) scale(1.5)
+        opacity: 0.2
+        border-color: rgba(252, 0, 255, 0.3)
+    100%
+        transform: translate(-50%, -50%) scale(0.5)
+        opacity: 0.8
+        border-color: rgba(0, 219, 222, 0.3)
+
+// ========================================================================================================= >>    
+
+.product
+    position: relative
+    width: 100%
+    height: 100%
+    padding: 160px 0
+
+    .product_content
+        margin: 0 auto
+        text-align: center
+
+        .product_title
+            position: relative
+            width: 100%
+            height: 100%
+
+            .product_title_area
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .rating
+                    background-color: $productbackgroundcolor
+                    padding: 10px
+                    border-radius: 100px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    .rating_content
+                        display: flex
+                        align-items: center
+                        justify-content: center
+                        gap: 6px
+                        padding: 4px 10px
+
+                        svg
+                            color: #fff
+
+                h2
+                    font-size: 18lpx
+                    margin-left: 20px
+
+        .product_text
+            position: relative
+            width: 100%
+            height: 100%
+            padding-top: 60px
+
+            .product_text_content
+                position: relative
+                display: flex
+                align-items: center
+                justify-content: center
+
+                .product_text_left
+                    position: relative
+                    width: 50%
+
+                .product_text_right
+                    position: relative
+                    width: 50%
+
+                    .product_text_right_content
+                        margin: 0 auto
+                        text-align: left
+                        padding-left: 20px
+
+                        h3
+                            width: 500px
+                            font-size: 60px
+                            font-weight: 600
+                            color: #000
+
+                        p
+                            width: 400px
+                            margin-top: 20px
+                            line-height: 1.5
+                            margin-top: 40px
+
+                        .product_text_right_button
+                            position: relative
+                            margin-top: 40px
+                            display: inline-block
+
+                            .product_text_right_button_content
+                                margin: 0 auto
+                                width: 140px
+                                overflow: hidden
+                                background-color: #000
+                                border-radius: 4px
+                                padding: 10px 20px
+                                a
+                                    width: 100%
+                                    text-decoration: none
+                                    color: #fff
+                                    font-size: 20px
+                                    font-weight: 600
+                                    transition: all 0.3s ease
+                                    display: flex
+                                    align-items: center
+                                    justify-content: space-between
+                                    transform: translateX(-44px)
+                                    transition: all 0.3s ease
+
+                                    svg
+                                        width: 24px
+                                        height: 24px
+                                        display: inline-block
+
+                                    &:hover
+                                        transform: translateX(44px)
+
+// 標題輪播淡入淡出動畫
+@keyframes fadeInOut
+    0%
+        opacity: 1
+        transform: translateY(0)
+    80%
+        opacity: 1
+        transform: translateY(0)
+    90%
+        opacity: 0
+        transform: translateY(-10px)
+    100%
+        opacity: 1
+        transform: translateY(0)
