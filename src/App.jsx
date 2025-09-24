@@ -3,6 +3,8 @@ import Banner from './Banner';
 import Product from './Product';
 import FloatingDots from './FloatingDots';
 import Feature from './Feature';
+import Product_description from './Product_description';
+
 
 export default function App() {
   return (
@@ -12,6 +14,7 @@ export default function App() {
       <Banner />
       <Product />
       <Feature />
+      <Product_description />
     </>
   );
 }

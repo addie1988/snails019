@@ -1023,7 +1023,7 @@
 
 .feature .feature_content .feature_ul .feature_ul_content ul li .feature_ul_icon .feature_ul_icon_content svg {
   font-size: 60px;
-  color: #cbcbcb;
+  color: #b4b4b4;
   transition: all 0.3s ease;
 }
 
@@ -1146,5 +1146,300 @@
   .feature .feature_content .feature_p .feature_p_content p {
     font-size: 14px;
     line-height: 1.4;
+  }
+}
+
+.Product_description {
+  position: relative;
+  padding-top: 100px;
+}
+
+.Product_description .Product_description_content {
+  margin: 0 auto;
+  display: -webkit-inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.Product_description .Product_description_content .Product_description_img {
+  position: relative;
+}
+
+.Product_description .Product_description_content .Product_description_img .Product_description_img_content {
+  margin: 0 auto;
+}
+
+.Product_description .Product_description_content .Product_description_img .Product_description_img_content img {
+  width: 100%;
+}
+
+.Product_description .Product_description_content .Product_description_img .Product_description_img_content {
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Product_description .Product_description_content .Product_description_img .Product_description_img_content img {
+  position: relative;
+  z-index: 2;
+  animation: rotateImage 10s linear infinite;
+}
+
+.Product_description .Product_description_content .Product_description_img .Product_description_img_content h2 {
+  position: absolute;
+  font-size: 20rem;
+  font-weight: 900;
+  height: 350px;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  text-align: center;
+  margin-top: 20px;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  z-index: 1;
+  transition: all 0.1s ease-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+.Product_description .Product_description_content .Product_description_text_area {
+  position: relative;
+  width: 40%;
+  height: 600px;
+  overflow-y: auto;
+  z-index: 2;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding-left: 30px;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_1 {
+  position: relative;
+  width: 100%;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_1 .Product_description_text_area_1_content {
+  margin: 0 auto;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_1 .Product_description_text_area_1_content svg {
+  font-size: 80px;
+  color: #b4b4b4;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_1 .Product_description_text_area_1_content h2 {
+  width: 200px;
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+  padding-top: 50px;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_1 .Product_description_text_area_1_content p {
+  width: 300px;
+  font-size: 16px;
+  color: #b4b4b4;
+  line-height: 1.5;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_1 .Product_description_text_area_1_content a {
+  font-size: 16px;
+  color: #fff;
+  width: 200px;
+  height: 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_2 {
+  position: relative;
+  width: 100%;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_2 .Product_description_text_area_2_content {
+  margin: 0 auto;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_2 .Product_description_text_area_2_content svg {
+  font-size: 80px;
+  color: #b4b4b4;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_2 .Product_description_text_area_2_content h2 {
+  width: 200px;
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+  padding-top: 40px;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_2 .Product_description_text_area_2_content p {
+  width: 300px;
+  font-size: 16px;
+  color: #b4b4b4;
+  line-height: 1.5;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_2 .Product_description_text_area_2_content a {
+  font-size: 16px;
+  color: #fff;
+  width: 200px;
+  height: 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 {
+  position: relative;
+  width: 100%;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 .Product_description_text_area_3_content {
+  margin: 0 auto;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 .Product_description_text_area_3_content svg {
+  font-size: 80px;
+  color: #b4b4b4;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 .Product_description_text_area_3_content h2 {
+  width: 200px;
+  font-size: 60px;
+  font-weight: 600;
+  color: #000;
+  padding-top: 40px;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 .Product_description_text_area_3_content p {
+  width: 300px;
+  font-size: 16px;
+  color: #b4b4b4;
+  line-height: 1.5;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 .Product_description_text_area_3_content a {
+  font-size: 16px;
+  color: #fff;
+  width: 200px;
+  height: 18px;
+  text-align: center;
+  display: inline-block;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_description_text_area_3 .Product_description_text_area_3_content a p {
+  color: #fff;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area {
+  position: relative;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content {
+  margin: 0 auto;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content svg {
+  width: 26px;
+  height: 26px;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content p {
+  width: 100%;
+  font-size: 14px;
+  word-break: break-all;
+  padding: 40px 0;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content a {
+  word-break: break-all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content a p {
+  transform: translateX(-40px);
+  transition: all 0.3s ease;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content a svg {
+  color: #fff;
+  font-size: 16px;
+  transform: translateX(-40px);
+  transition: all 0.3s ease;
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content a:hover p {
+  transform: translateX(40px);
+}
+
+.Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content .Product_area .Product_area_content a:hover svg {
+  transform: translateX(40px);
+}
+
+@keyframes rotateImage {
+  0% {
+    transform: rotate(-15deg);
+    scale: .9;
+  }
+  50% {
+    transform: rotate(0deg);
+    scale: .7;
+  }
+  100% {
+    transform: rotate(-15deg);
+    scale: .9;
+  }
+}
+
+@media (max-width: 1148px) {
+  .Product_description {
+    padding-bottom: 100px;
+  }
+  .Product_description .Product_description_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  .Product_description .Product_description_content .Product_description_img {
+    overflow: hidden;
+  }
+  .Product_description .Product_description_content .Product_description_text_area {
+    width: 80%;
+    height: 100%;
+    overflow-y: clip;
+  }
+  .Product_description .Product_description_content .Product_description_text_area .Product_description_text_area_content {
+    gap: 50px;
+    padding-left: 0;
   }
 }
