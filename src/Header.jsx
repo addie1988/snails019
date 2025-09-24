@@ -48,6 +48,31 @@ export default function Header() {
     };
   }, [lastScrollY]);
 
+  // 點擊空白處關閉選單
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMenuOpen) {
+        const mobileMenu = document.querySelector('.mobile_menu');
+        const hamburgerMenu = document.querySelector('.hamburger_menu');
+        
+        // 如果點擊的不是選單內容或漢堡按鈕，則關閉選單
+        if (mobileMenu && hamburgerMenu && 
+            !mobileMenu.contains(event.target) && 
+            !hamburgerMenu.contains(event.target)) {
+          setIsMenuOpen(false);
+        }
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   return (
     <div className={`header ${isHeaderVisible ? 'visible' : 'hidden'} ${hasBackground ? 'with-background' : ''}`}>
       <div className="header_content">

@@ -185,7 +185,8 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
         opacity: 1
         visibility: visible
         transform: translateY(0)
-        background-color: #fff
+        background-color: rgba(255, 255, 255, 0.8)
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15)
 
     .menu_content
         padding: 20px 0
@@ -393,7 +394,6 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
                 .banner_img_area
                     position: relative
                     text-align: center
-                    overflow: hidden
 
                     // 聲波背景效果
                     &::before
@@ -427,6 +427,7 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
                         margin: 0 auto
                         position: relative
                         z-index: 2
+                        animation: banner_img_area_content 5s ease-in-out infinite
 
                     img
                         width: 100%
@@ -467,6 +468,17 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
                             transform: scale(1.02)
                         100%
                             transform: scale(1)
+
+                    @keyframes banner_img_area_content
+                        0%
+                            transform: translateY(-40px)
+                            scale: 1
+                        50%
+                            transform: translateY(0)
+                            scale: .8
+                        100%
+                            transform: translateY(-40px)
+                            scale: 1
 
         .banner_text
             position: relative
@@ -650,14 +662,14 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
                             color: #bababa
 
                         h3
-                            width: 500px
+                            width: 100%
                             font-size: 60px
                             font-weight: 600
                             color: #000
                             padding-top: 40px
 
                         p
-                            width: 400px
+                            width: 100%
                             margin-top: 20px
                             line-height: 1.5
                             margin-top: 40px
@@ -806,10 +818,35 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
                             .serial_numberno
                                 .serial_numberno
 
+@media (max-width: 550px)
+    .product
+        .product_content
+            .product_list   
+                .product_list_content
+                    display: flex
+                    justify-content: center
+                    ul
+                        width: 80%
+                        display: flex
+                        justify-content: center
+                        gap: 50px
+                        li
+                            display: flex
+                            flex-wrap: wrap
+                            align-items: center
+                            justify-content: center
+                            gap: 10px
+                            .serial_numberno
+                                font-size: 14px
+                            p
+                                width: 100%
+                                text-align: center
+
 // ========================================================================================================= >>    
 
 .feature
     position: relative
+    padding: 0 0 60px 0
 
     .feature_content
         margin: 0 auto
@@ -828,21 +865,166 @@ $backgroundimage: linear-gradient(to right, #00dbde 0%, #fc00ff 100%)
                 justify-content: center
                 gap: 10px
                 h1
-                    font-size: 100px
+                    font-size: 160px
                     font-weight: 900
-                    font-family: 'Poppins', sans-serif
+                    font-family: 'emoji'
                     background-image: $backgroundimage
                     color: transparent
                     -webkit-background-clip: text
                     background-clip: text
-                    p
-                        font-size: 1.5rem
-                        font-weight: 600
-                        color: #000
+                p
+                    width: 50%
+                    font-size: 50px
+                    font-weight: 900
+                    font-family: 'emoji'
+                    line-height: .8
+                    color: #000
 
         .feature_ul
             position: relative
+            max-width: 1200px
             padding-top: 60px
+
+            .feature_ul_content
+                margin: 0 auto
+
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    gap: 20px
+
+                    li
+                        width: 24%
+                        text-align: center
+                        padding: 20px
+
+                        .feature_ul_icon
+                            position: relative
+
+                            .feature_ul_icon_content
+                                margin: 0 auto
+
+                                svg
+                                    font-size: 60px
+                                    color: #cbcbcb
+                                    transition: all 0.3s ease
+
+                        .feature_ul_title
+                            position: relative
+                            padding: 20px
+
+                            .feature_ul_title_content
+                                margin: 0 auto
+
+                                h3
+                                    font-size: 20px
+                                    font-weight: 900
+                                    color: #000
+
+                        .feature_ul_text
+                            position: relative
+
+                            .feature_ul_text_content
+                                margin: 0 auto
+
+                                p
+                                    width: 70%
+                                    margin: 0 auto
+                                    font-size: 16px
+                                    color: #b4b4b4
+                                    line-height: 1.7
+
+                        &:hover
+                            .feature_ul_icon
+                                .feature_ul_icon_content
+                                    svg
+                                        color: #000
 
         .feature_p
             position: relative
+            width: 100%
+            padding-top: 100px
+
+            .feature_p_content
+                margin: 0 auto
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                justify-content: center
+                gap: 18px
+
+                span
+                    font-size: 16px
+                    font-weight: 900
+                    color: #fff
+                    background-color: #2EBB79
+                    padding: 10px 20px
+                    border-radius: 100px
+                p
+                    font-size: 16px
+                    font-weight: 900
+                    color: #000
+
+@media (max-width: 800px)
+    .feature
+        .feature_content
+            .feature_title
+                .feature_title_content
+                    h1
+                    p
+            .feature_ul
+                .feature_ul_content
+                    ul
+                        li
+                            width: 40%
+                            .feature_ul_icon
+                                .feature_ul_icon_content
+                                    svg
+                                        font-size: 40px
+
+@media (max-width: 500px)
+    .feature
+        .feature_content
+            .feature_title
+                .feature_title_content
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    gap: 0px
+                    text-align: center
+                    h1
+                        width: 100%
+                    p
+                        width: 100%
+                        line-height: 1.1
+            .feature_ul
+                width: 80%
+                .feature_ul_content
+                    ul
+                        display: flex
+                        flex-wrap: wrap
+                        align-items: center
+                        justify-content: center
+                        gap: 30px
+                        li
+                            width: 100%
+                            padding: 0
+                            .feature_ul_icon
+                                .feature_ul_icon_content
+                                    svg
+                                        font-size: 40px
+            .feature_p
+                width: 80%
+                .feature_p_content
+                    text-align: center
+                    span
+                        font-size: 14px
+                    p
+                        font-size: 14px
+                        line-height: 1.4
+
+// ========================================================================================================= >>   
+
