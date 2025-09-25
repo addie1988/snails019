@@ -1622,7 +1622,9 @@ $color_p: #b4b4b4
 
 .good_reviews
     position: relative
+    background-color: #fff
     padding-top: 100px
+    padding-bottom: 100px
 
     .good_reviews_content
         margin: 0 auto
@@ -1834,5 +1836,149 @@ $color_p: #b4b4b4
                                             word-break: break-all
 
 // ========================================================================================================= >>   
+
+.customization
+    position: relative
+    background: url(/snails019/src/images/banner_bg_1.jpg) center center
+    background-size: auto
+    width: 100%
+    height: 100%
+    padding: 160px 0
+    overflow: hidden
+    padding-top: 100px
+
+    .customization_content
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+        .customization_title
+            position: relative
+            width: 80%
+            margin: 0 auto
+
+            .customization_title_content
+                margin: 0 auto
+                text-align: center
+
+                h1
+                    font-size: 80px
+                    font-weight: 900
+                    font-family: 'system-ui'
+                    word-break: break-all
+
+        .customization_img
+            position: relative
+            width: 100%
+            padding-top: 100px
+
+            .customization_img_content
+                margin: 0 auto
+
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    gap: 20px
+
+                    li
+                        position: relative
+                        text-align: center
+                        line-height: 3
+
+                        .customization_img_max
+                            position: relative
+
+                            .customization_img_max_content
+                                margin: 0 auto
+
+                                img
+                                    width: 70%
+
+                        .customization_img_min
+                            position: relative
+
+                        .customization_img_text
+                            position: relative
+
+        .customization_button
+            position: relative
+            padding-top: 100px
+
+            .customization_button_content
+                margin: 0 auto
+                display: flex
+                flex-wrap: wrap
+                align-items: center
+                justify-content: center
+                a
+                    width: 400px
+                    height: 80px
+                    font-size: 16px
+                    font-weight: 300
+                    color: #000
+                    text-decoration: none
+                    padding: 10px 20px
+                    background-color: #2C3038
+                    color: #fff
+                    transition: all 0.3s ease
+                    display: flex
+                    align-items: center
+                    justify-content: center
+
+                    p
+                        width: 100%
+                        font-size: 30px
+                        text-align: center
+                        color: #fff
+
+                    &:nth-child(2)
+                        background-image: $backgroundimage
+                        color: #fff
+
+                    &:hover
+                        background-color: #fff
+                        color: #000
+
+        .customization_img_p
+            position: relative
+            padding-top: 40px
+
+            .customization_img_p_content
+                margin: 0 auto
+                text-align: center
+
+                p
+                    font-size: 24px
+                    font-weight: 300
+                    color: $color_p
+                    word-break: break-all
+
+@media (max-width: 500px)
+    .customization
+        .customization_content
+            .customization_title
+                .customization_title_content
+                    h1
+                        font-size: 40px
+            .customization_img
+                width: 80%
+                .customization_img_content
+                    ul
+                        li
+                            .customization_img_max
+                                .customization_img_max_content
+                                    img
+                                        width: 100%
+            .customization_button
+                width: 80%
+            .customization_img_p
+                width: 80%
+
+// ========================================================================================================= >>       
+
     
-        
