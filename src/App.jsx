@@ -5,6 +5,7 @@ import FloatingDots from './FloatingDots';
 import Feature from './Feature';
 import Product_description from './Product_description';
 import Original_works from './Original_works';
+import Good_reviews from './Good_reviews';
 
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
       <Feature />
       <Product_description />
       <Original_works />
+      <Good_reviews />
     </>
   );
 }
