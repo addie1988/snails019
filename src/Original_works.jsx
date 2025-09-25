@@ -55,7 +55,7 @@ function Original_works() {
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
     const walk = (x - startX) * 2; // 調整滑動敏感度
-    const newPosition = scrollLeft - walk;
+    const newPosition = scrollLeft + walk;
 
     // 計算一組產品的寬度（7個產品 * 200px + 6個間距 * 30px = 1580px）
     const itemWidth = 200;
@@ -94,7 +94,7 @@ function Original_works() {
     if (!isDragging) return;
     const x = e.touches[0].pageX - containerRef.current.offsetLeft;
     const walk = (x - startX) * 2;
-    const newPosition = scrollLeft - walk;
+    const newPosition = scrollLeft + walk;
 
     // 計算一組產品的寬度
     const itemWidth = 200;
