@@ -111,7 +111,7 @@ function Feature() {
                         </div>
                         <div className="feature_ul_title">
                             <div className="feature_ul_title_content">
-                                <h3>Sleek d ㄩesign</h3>
+                                <h3>Sleek design</h3>
                             </div>
                         </div>
                         <div className="feature_ul_text">
