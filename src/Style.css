@@ -2211,3 +2211,129 @@
     width: 80%;
   }
 }
+
+.footer {
+  position: relative;
+  background-color: #fff;
+}
+
+.footer .footer_content {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-bottom: 1px solid #b4b4b4;
+  border-style: solid;
+}
+
+.footer .footer_content .telephone {
+  position: relative;
+}
+
+.footer .footer_content .telephone .telephone_content {
+  margin: 0 auto;
+  line-height: 2;
+}
+
+.footer .footer_content .telephone .telephone_content span {
+  color: #b4b4b4;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.footer .footer_content .telephone .telephone_content p {
+  color: #000;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.footer .footer_content .community {
+  position: relative;
+}
+
+.footer .footer_content .community .community_content {
+  margin: 0 auto;
+}
+
+.footer .footer_content .community .community_content ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer .footer_content .community .community_content ul li {
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer .footer_content .community .community_content ul li svg {
+  font-size: 30px;
+  color: #b4b4b4;
+  transition: all 0.3s ease;
+}
+
+.footer .footer_content .community .community_content ul li:hover svg {
+  scale: 1.2;
+  color: #000;
+}
+
+.footer .footer_area {
+  position: relative;
+  padding: 20px 0;
+}
+
+.footer .footer_area .footer_area_content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer .footer_area .footer_area_content p {
+  font-size: 13px;
+  font-weight: 300;
+  color: #000;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+@media (max-width: 520px) {
+  .footer .footer_content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer .footer_content .telephone {
+    width: 80%;
+  }
+  .footer .footer_content .telephone .telephone_content {
+    text-align: center;
+  }
+  .footer .footer_content .telephone .telephone_content span {
+    font-size: 14px;
+  }
+  .footer .footer_content .telephone .telephone_content p {
+    font-size: 20px;
+  }
+  .footer .footer_content .community {
+    width: 80%;
+  }
+  .footer .footer_content .community .community_content ul {
+    gap: 10px;
+  }
+  .footer .footer_content .community .community_content ul li {
+    font-size: 14px;
+  }
+  .footer .footer_area {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .footer .footer_area .footer_area_content p {
+    font-size: 11px;
+  }
+}

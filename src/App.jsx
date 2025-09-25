@@ -7,6 +7,7 @@ import Product_description from './Product_description';
 import Original_works from './Original_works';
 import Good_reviews from './Good_reviews';
 import Customization from './Customization';
+import Footer from './Footer';
 
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
       <Original_works />
       <Good_reviews />
       <Customization />
+      <Footer />
     </>
   );
 }

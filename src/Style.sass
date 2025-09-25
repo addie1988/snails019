@@ -1981,4 +1981,106 @@ $color_p: #b4b4b4
 
 // ========================================================================================================= >>       
 
-    
+.footer
+    position: relative
+    background-color: #fff
+
+    .footer_content
+        margin: 0 auto
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        justify-content: space-around
+        padding: 20px 0
+        border-bottom: 1px solid $color_p
+        border-style: solid
+
+        .telephone
+            position: relative
+
+            .telephone_content
+                margin: 0 auto
+                line-height: 2
+
+                span
+                    color: $color_p
+                    font-size: 18px
+                    font-weight: 900
+                p
+                    color: #000
+                    font-size: 26px
+                    font-weight: 900
+                    line-height: 1.4
+                    word-break: break-all
+
+        .community
+            position: relative
+
+            .community_content
+                margin: 0 auto
+
+                ul
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: center
+                    gap: 40px
+
+                    li
+                        font-size: 20px
+                        color: #000
+                        cursor: pointer
+                        transition: all 0.3s ease
+
+                        svg
+                            font-size: 30px
+                            color: $color_p
+                            transition: all 0.3s ease
+
+                        &:hover
+                            svg
+                                scale: 1.2
+                                color: #000
+
+    .footer_area
+        position: relative
+        padding: 20px 0
+
+        .footer_area_content
+            margin: 0 auto
+            text-align: center
+
+            p
+                font-size: 13px
+                font-weight: 300
+                color: #000
+                line-height: 1.4
+                word-break: break-all
+
+
+@media (max-width: 520px)
+    .footer
+        .footer_content
+            flex-direction: column
+            gap: 20px
+            .telephone
+                width: 80%
+                .telephone_content
+                    text-align: center
+                    span
+                        font-size: 14px
+                    p
+                        font-size: 20px
+            .community
+                width: 80%
+                .community_content
+                    ul
+                        gap: 10px
+                        li
+                            font-size: 14px
+        .footer_area
+            width: 80%
+            margin: 0 auto
+            .footer_area_content
+                p
+                    font-size: 11px
