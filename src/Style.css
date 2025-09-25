@@ -1721,7 +1721,7 @@
   bottom: 0;
   width: 100px;
   height: 2px;
-  background-color: #fff;
+  background-color: #b4b4b4;
   z-index: 1;
 }
 
@@ -1733,7 +1733,7 @@
   bottom: 0;
   width: 100px;
   height: 2px;
-  background-color: #fff;
+  background-color: #b4b4b4;
   z-index: 1;
 }
 
@@ -1747,13 +1747,13 @@
 
 .original_works .original_works_content .original_works_p .original_works_p_content .original_works_p_area svg {
   font-size: 40px;
-  color: #fff;
+  color: #b4b4b4;
 }
 
 .original_works .original_works_content .original_works_p .original_works_p_content .original_works_p_area p {
   font-size: 16px;
   font-weight: 900;
-  color: #ffffff;
+  color: #b4b4b4;
   line-height: 1.4;
   margin-top: 20px;
 }
